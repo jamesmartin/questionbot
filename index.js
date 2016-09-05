@@ -14,6 +14,7 @@ app.set('port', (process.env.PORT || 5000));
 app.post('/question', function (req, res) {
   var response = {
     response_type: 'in_channel',
+    text: req.body.user_name + ' has asked a question. To answer: `/answer ' + req.body.response_url + ' [your response]`',
     attachments: [
       {
         text: req.body.text
