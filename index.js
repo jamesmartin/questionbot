@@ -22,7 +22,7 @@ app.post('/question', function (req, res) {
       },
       {
         pretext: 'Response',
-        text: req.body
+        text: JSON.stringify(req.body)
       }
     ]
   }
