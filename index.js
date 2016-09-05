@@ -21,8 +21,8 @@ app.post('/question', function (req, res) {
         footer: 'To answer: `/answer ' + req.body.response_url + ' [your response]`'
       },
       {
-        pretext: 'Response',
-        text: JSON.stringify(req.body)
+        pretext: 'Response JSON',
+        text: "```" + JSON.stringify(req.body) + "```"
       }
     ]
   }
