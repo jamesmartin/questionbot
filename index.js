@@ -18,7 +18,7 @@ app.post('/question', function (req, res) {
       {
         footer: 'Asked by <@'+req.body.user_id+'|'+req.body.user_name + '>',
         title: req.body.text,
-        color: "#c41e4b",
+        color: "good",
         actions: [
           {
             name: "answer",
