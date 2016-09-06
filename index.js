@@ -30,7 +30,8 @@ app.post('/question', function (req, res) {
         // ]
       },
       {
-        text: '`To answer type: /answer id123abc [your answer]`'
+        text: '`To answer type: /answer id123abc [your answer]`',
+        mrkdwn: true
       }
       // ,
       // {
