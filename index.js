@@ -1,12 +1,11 @@
 var express = require('express');
-var logger = require('morgan');
 var bodyParser = require('body-parser')
+var logger = require('morgan');
+
 var app = express();
 
-app.use( bodyParser.json() );       // to support JSON-encoded bodies
-app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
-  extended: true
-}));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(logger('dev'));
 
 app.set('port', (process.env.PORT || 5000));
@@ -18,7 +17,7 @@ app.post('/question', function (req, res) {
       {
         author_name: '<@'+req.body.user_id+'|'+req.body.user_name + '> has asked a question',
         text: req.body.text,
-        footer: 'To answer: /answer [question_id] [your response]'
+        footer: 'To answer: /answer [question_id] [your response]',
         "actions": [
           {
             "name": "upvote",
@@ -36,7 +35,7 @@ app.post('/question', function (req, res) {
       },
       {
         pretext: 'Response JSON',
-        text: "```" + JSON.stringify(req.body) + "```"
+        text: JSON.stringify(req.body)
       }
     ]
   }
