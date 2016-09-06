@@ -23,7 +23,7 @@ app.post('/question', function (req, res) {
           {
             name: "answer",
             text: "Answer this question",
-            style: "good",
+            style: "primary",
             type: "button",
             value: "/answer abc123 "
           }
