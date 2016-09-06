@@ -16,7 +16,7 @@ app.post('/question', function (req, res) {
     attachments: [
       {
         author_name: '<@'+req.body.user_id+'|'+req.body.user_name + '> has asked a question',
-        text: req.body.text,
+        title: req.body.text,
         footer: 'To answer: /answer [question_id] [your response]',
         "actions": [
           {
