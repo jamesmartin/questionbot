@@ -18,15 +18,19 @@ app.post('/question', function (req, res) {
       {
         footer: 'Asked by <@'+req.body.user_id+'|'+req.body.user_name + '>',
         title: req.body.text,
-        color: "#3AA3E3",
-        actions: [
-          {
-            name: "answer",
-            text: "Answer this question",
-            type: "button",
-            value: "/answer abc123 "
-          }
-        ]
+        color: "#3AA3E3"
+        // ,
+        // actions: [
+        //   {
+        //     name: "answer",
+        //     text: "Answer this question",
+        //     type: "button",
+        //     value: "/answer abc123 "
+        //   }
+        // ]
+      },
+      {
+        text: '`To answer type: /answer id123abc [your answer]`'
       }
       // ,
       // {
