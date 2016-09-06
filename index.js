@@ -18,12 +18,11 @@ app.post('/question', function (req, res) {
       {
         footer: 'Asked by <@'+req.body.user_id+'|'+req.body.user_name + '>',
         title: req.body.text,
-        color: "#44B786",
+        color: "#3AA3E3",
         actions: [
           {
             name: "answer",
             text: "Answer this question",
-            style: "primary",
             type: "button",
             value: "/answer abc123 "
           }
@@ -49,7 +48,7 @@ app.post('/answer', function (req, res) {
       {
         footer: 'Answered by <@'+req.body.user_id+'|'+req.body.user_name + '>',
         title: req.body.text,
-        color: "#3AA3E3"
+        color: "#2AB27B"
       }
       // ,
       // {
