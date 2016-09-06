@@ -17,19 +17,20 @@ app.post('/question', function (req, res) {
       {
         author_name: '<@'+req.body.user_id+'|'+req.body.user_name + '> has asked a question',
         title: req.body.text,
-        footer: 'To answer: /answer [question_id] [your response]',
-        "actions": [
+        color: "#3AA3E3",
+        actions: [
           {
-            "name": "upvote",
-            "text": "+1",
-            "type": "button",
-            "value": "upvote"
+            name: "answer",
+            text: "Answer",
+            style: "success",
+            type: "button",
+            value: "answer"
           },
           {
-            "name": "answer",
-            "text": "Answer",
-            "type": "button",
-            "value": "answer"
+            name: "upvote",
+            text: "+1",
+            type: "button",
+            value: "upvote"
           }
         ]
       },
