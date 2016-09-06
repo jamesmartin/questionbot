@@ -16,9 +16,23 @@ app.post('/question', function (req, res) {
     response_type: 'in_channel',
     attachments: [
       {
-        author_name: req.body.user_name + 'has asked a question',
+        author_name: '<@'+req.body.user_id+'|'+req.body.user_name + '> has asked a question',
         text: req.body.text,
-        footer: 'To answer: `/answer ' + req.body.response_url + ' [your response]`'
+        footer: 'To answer: /answer [question_id] [your response]'
+        "actions": [
+          {
+            "name": "upvote",
+            "text": "+1",
+            "type": "button",
+            "value": "upvote"
+          },
+          {
+            "name": "answer",
+            "text": "Answer",
+            "type": "button",
+            "value": "answer"
+          }
+        ]
       },
       {
         pretext: 'Response JSON',
