@@ -34,11 +34,12 @@ app.post('/question', function (req, res) {
             value: "upvote"
           }
         ]
-      },
-      {
-        pretext: 'Response JSON',
-        text: beautify(JSON.stringify(req.body))
       }
+      // ,
+      // {
+      //   pretext: 'Response JSON',
+      //   text: beautify(JSON.stringify(req.body))
+      // }
     ]
   }
 
@@ -55,11 +56,12 @@ app.post('/answer', function (req, res) {
         author_name: '<@'+req.body.user_id+'|'+req.body.user_name + '> has posted an answer',
         title: req.body.text,
         color: "#3AA3E3"
-      },
-      {
-        pretext: 'Response JSON',
-        text: beautify(JSON.stringify(req.body))
       }
+      // ,
+      // {
+      //   pretext: 'Response JSON',
+      //   text: beautify(JSON.stringify(req.body))
+      // }
     ]
   }
 
