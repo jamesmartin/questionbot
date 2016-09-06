@@ -68,6 +68,13 @@ app.post('/answer', function (req, res) {
   res.send(response);
 });
 
+app.post('/interactive-messages', function(req, res) {
+  var response = {}
+  res.type('json');
+  res.set('Content-type', 'application/json');
+  res.send(response);
+});
+
 app.listen(app.get('port'), function () {
   console.log('Example app listening on port ' + app.get('port'));
 });
