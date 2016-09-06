@@ -23,9 +23,9 @@ app.post('/question', function (req, res) {
           {
             name: "answer",
             text: "Answer this question",
-            style: "success",
+            style: "good",
             type: "button",
-            value: "answer"
+            value: "/answer abc123 "
           }
         ]
       }
