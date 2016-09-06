@@ -22,16 +22,10 @@ app.post('/question', function (req, res) {
         actions: [
           {
             name: "answer",
-            text: "Answer",
+            text: "Answer this question",
             style: "success",
             type: "button",
             value: "answer"
-          },
-          {
-            name: "upvote",
-            text: "+1",
-            type: "button",
-            value: "upvote"
           }
         ]
       }
