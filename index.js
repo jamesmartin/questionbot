@@ -16,7 +16,7 @@ app.post('/question', function (req, res) {
     response_type: 'in_channel',
     attachments: [
       {
-        author_name: '<@'+req.body.user_id+'|'+req.body.user_name + '> has asked a question',
+        footer: 'Asked by <@'+req.body.user_id+'|'+req.body.user_name + '>',
         title: req.body.text,
         color: "#c41e4b",
         actions: [
@@ -47,7 +47,7 @@ app.post('/answer', function (req, res) {
     response_type: 'in_channel',
     attachments: [
       {
-        author_name: '<@'+req.body.user_id+'|'+req.body.user_name + '> has posted an answer',
+        footer: 'Answered by <@'+req.body.user_id+'|'+req.body.user_name + '>',
         title: req.body.text,
         color: "#3AA3E3"
       }
