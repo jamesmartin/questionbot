@@ -1,6 +1,7 @@
 var express = require('express');
 var bodyParser = require('body-parser')
 var logger = require('morgan');
+var beautify = require('js-beautify').js_beautify;
 
 var app = express();
 
@@ -36,7 +37,7 @@ app.post('/question', function (req, res) {
       },
       {
         pretext: 'Response JSON',
-        text: JSON.stringify(req.body)
+        text: beautify(JSON.stringify(req.body))
       }
     ]
   }
@@ -57,7 +58,7 @@ app.post('/answer', function (req, res) {
       },
       {
         pretext: 'Response JSON',
-        text: JSON.stringify(req.body)
+        text: beautify(JSON.stringify(req.body))
       }
     ]
   }
